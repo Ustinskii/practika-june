@@ -5,17 +5,22 @@ const makeup = []
 
 // перебираем полученный массив и из него создаем новый
 function getValue(array) {
+    document.getElementById('card').innerHTML = ""
     for (let i = 0; i < array.length; i++) {
-        makeup[i] = {
-            brand: array[i].brand,
-            name: array[i].name,
-            description: array[i].description,
-            image_link: array[i].image_link,
-            price: array[i].price,
-            links: ('https://www.google.com/search?q=' + array[i].name)
-        }
+
+
+        document.getElementById('card').insertAdjacentHTML('beforeend',
+            '<div class="card"><h3 class="card-name">'
+            + array[i].name
+            + '</h3><a href="'
+            + ('https://www.google.com/search?q=' + array[i].name)
+            + '" class="card-link"><img src = "'
+            + array[i].image_link
+            + '" alt = "" class="card-image"></a><p class="card-price">$'
+            + array[i].price
+            + '</p></div>')
     }
-    console.log(makeup) //выводим новый массив в консоль 
+
 }
 // Обновляем переменные данными из форм. Получаем данные из JSON
 

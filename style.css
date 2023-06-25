@@ -8,10 +8,6 @@ body {
   color: rgb(73, 73, 73);
   background-color: #f0eded;
   min-height: 100vh;
-  /* 
-  display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 section {
@@ -51,7 +47,6 @@ input {
 }
 
 .cards {
-  border: solid 1px blue;
   width: 90%;
   margin: 20px auto;
   display: flex;
@@ -61,7 +56,6 @@ input {
 
 .card {
   flex: 1 1 250px;
-  border: solid 1px red;
   margin: 10px;
   padding: 5px;
   display: flex;
@@ -71,8 +65,10 @@ input {
 
 .card-name {
   text-align: center;
+}
 
-
+.card-link {
+  margin: 0 auto;
 }
 
 .card-image {
